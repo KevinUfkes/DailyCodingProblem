@@ -10,8 +10,40 @@
 package kufkes;
 
 public class Main {
+// Print array
+    public static String printArray(int [] arr){
+        String s = "";
+        for(int x=0; x<arr.length; x++){
+            s += arr[x] + ", ";
+        }
+        return s;
+    }
+
+// Part 1 - Multiplying whole array and dividing by i
+    public static void productArrayDivision(int [] arr) {
+        int res = arr[0];
+        for(int x=1; x<arr.length; x++){
+            res *= arr[x];
+        }
+        for(int y=0; y<arr.length; y++){
+            arr[y] = res/arr[y];
+        }
+    }
 
     public static void main(String[] args) {
-	// write your code here
+
+        int [] array = new int [5];
+        array[0] = 1;
+        array[1] = 2;
+        array[2] = 3;
+        array[3] = 4;
+        array[4] = 5;
+
+        System.out.println(printArray(array));
+
+        productArrayDivision(array);
+
+        System.out.println(printArray(array));
+
     }
 }
