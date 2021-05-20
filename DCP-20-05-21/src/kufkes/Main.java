@@ -21,29 +21,55 @@ public class Main {
 
 // Part 1 - Multiplying whole array and dividing by i
     public static void productArrayDivision(int [] arr) {
-        int res = arr[0];
+        int prod = arr[0];
         for(int x=1; x<arr.length; x++){
-            res *= arr[x];
+            prod *= arr[x];
         }
         for(int y=0; y<arr.length; y++){
-            arr[y] = res/arr[y];
+            arr[y] = prod/arr[y];
+        }
+    }
+
+// Part 2 - Without using division
+
+    public static void productArrayNoDivision(int [] arr){
+
+        for(int x=0; x<arr.length; x++){
+            int prod = 1;
+            for(int y=0; y<arr.length; y++){
+                if(y != x){
+                    prod *= arr[x];
+                }
+            }
+            arr[x] = prod;
         }
     }
 
     public static void main(String[] args) {
 
-        int [] array = new int [5];
-        array[0] = 1;
-        array[1] = 2;
-        array[2] = 3;
-        array[3] = 4;
-        array[4] = 5;
+        int [] array1 = new int [5];
+        array1[0] = 1;
+        array1[1] = 2;
+        array1[2] = 3;
+        array1[3] = 4;
+        array1[4] = 5;
 
-        System.out.println(printArray(array));
+        int [] array2 = new int [5];
+        array2[0] = 1;
+        array2[1] = 2;
+        array2[2] = 3;
+        array2[3] = 4;
+        array2[4] = 5;
 
-        productArrayDivision(array);
+        System.out.println(printArray(array1));
+        productArrayDivision(array1);
+        System.out.println(printArray(array1));
 
-        System.out.println(printArray(array));
+        System.out.println("-----------------");
+
+        System.out.println(printArray(array2));
+        productArrayDivision(array2);
+        System.out.println(printArray(array2));
 
     }
 }
