@@ -2,14 +2,14 @@ package kufkes;
 
 public class LinkedList {
 
-    private Node head;
+    private LLNode head;
 
     public LinkedList(){
         head = null;
     }
 
     public void addFirst(int data){
-        Node n = new Node(data);
+        LLNode n = new LLNode(data);
         if (head != null) {
             n.next = head;
         }
@@ -17,8 +17,8 @@ public class LinkedList {
     }
 
     public void addLast(int data){
-        Node n = new Node(data);
-        Node temp = head;
+        LLNode n = new LLNode(data);
+        LLNode temp = head;
         if(temp == null){
             head = n;
         }
@@ -29,7 +29,7 @@ public class LinkedList {
     }
 
     public void addInOrder(int data){
-        Node n = new Node(data);
+        LLNode n = new LLNode(data);
 
 
         if(head == null || data < head.data){
@@ -37,8 +37,8 @@ public class LinkedList {
             head = n;
             return;
         }
-        Node prev = head;
-        Node curr = head;
+        LLNode prev = head;
+        LLNode curr = head;
 
         while(curr != null && curr.data < data){
             prev = curr;
@@ -49,7 +49,7 @@ public class LinkedList {
     }
 
     public boolean delete(int data){
-        Node curr, prev;
+        LLNode curr, prev;
         curr = prev = head;
 
         if(head == null || head.data == data){
@@ -69,7 +69,7 @@ public class LinkedList {
     }
 
     public String print(){
-        Node temp = head;
+        LLNode temp = head;
         String s = "";
 
         while(temp != null){

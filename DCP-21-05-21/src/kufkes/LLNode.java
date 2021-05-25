@@ -1,10 +1,10 @@
 package kufkes;
 
-public class Node {
-    Node next;
+public class LLNode {
+    LLNode next;
     int data;
 
-    public Node(int data){
+    public LLNode(int data){
         this.data = data;
         this.next = null;
     }
