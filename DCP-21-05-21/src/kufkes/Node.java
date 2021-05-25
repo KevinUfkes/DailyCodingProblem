@@ -1,11 +1,11 @@
 package kufkes;
 
 public class Node {
-    private Node next;
-    private int value;
+    Node next;
+    int data;
 
-    public Node(int value){
-        this.value = value;
+    public Node(int data){
+        this.data = data;
         this.next = null;
     }
 }

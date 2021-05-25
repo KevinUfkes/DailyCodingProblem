@@ -21,6 +21,19 @@ package kufkes;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+	    LinkedList ll = new LinkedList();
+
+        ll.addFirst(3);
+        ll.addLast(7);
+        ll.addInOrder(5);
+        ll.addInOrder(6);
+        ll.addInOrder(9);
+
+        System.out.println(ll.print());
+
+        System.out.println(ll.delete(6));
+
+        System.out.println(ll.print());
     }
 }
