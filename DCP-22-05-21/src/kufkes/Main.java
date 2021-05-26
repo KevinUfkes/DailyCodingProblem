@@ -11,6 +11,14 @@
 //
 //          You can modify the input array in-place.
 
+// Steps:
+// - sort array ascending
+// - if last integer is less than 1 -> return 1
+// - walk through array till first positive integer found
+// - if first positive integer is not 1 -> return 1
+// - if first positive integer is 1, walk through array until the next integer in line is greater than 1 more than the current -> return current + 1
+// - if at the end of array -> return last element + 1
+
 package kufkes;
 
 public class Main {
@@ -39,17 +47,29 @@ public class Main {
     }
 
     public static int problemSolver(int [] arr){
+        //if all integers are less than 1;
         if(arr[arr.length-1] < 1){
             return 1;
         }
-        for(int x=0; x<arr.length-1; x++){
-            if(arr[x] > 0) {
-                if(arr[x] != 1){
-                    return 4;
+
+        // track if integer is the first encountered
+        boolean firstPositive = false;
+        for(int x=0; x<arr.length; x++){
+            // if first positive integer is not 1 -> return 1
+            if(arr[x] > 0){
+                if(!firstPositive && arr[x]>1){
+                    return 1;
                 }
+                // first positive found
+                firstPositive = true;
+            }
+            // not the first positive, not the last element in the array, the next element is not 1 greater
+            if(firstPositive && x != arr.length-1 && arr[x]+1 != arr[x+1] ){
+                return arr[x]+1;
             }
         }
-        return 100;
+        // next smallest positive integer is one greater than the last element
+        return arr[arr.length-1]+1;
     }
 
     public static void main(String[] args) {
@@ -64,10 +84,10 @@ public class Main {
         arr1[2] = -1;
         arr1[3] = -9;
 
-        arr2[0] = 4;
-        arr2[1] = 1;
+        arr2[0] = 1;
+        arr2[1] = 2;
         arr2[2] = 3;
-        arr2[3] = 2;
+        arr2[3] = 4;
 
         arr3[0] = -3;
         arr3[1] = -4;
@@ -78,11 +98,6 @@ public class Main {
         arr4[1] = -2;
         arr4[2] = 0;
         arr4[3] = 1;
-
-        arr5[0] = 6;
-        arr5[1] = 1;
-        arr5[2] = 2;
-        arr5[3] = 5;
 
         System.out.println(printArray(arr1));
         System.out.println(printArray(arr2));
