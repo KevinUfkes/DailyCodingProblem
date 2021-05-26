@@ -20,20 +20,34 @@ package kufkes;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
+        BinarySearchTree bst = new BinarySearchTree();
 
-	    LinkedList ll = new LinkedList();
+        bst.insert(10);
+        bst.insert(23);
+        bst.insert(12);
+        System.out.println(bst.search(23));
+        System.out.println(bst.search(33));
 
-        ll.addFirst(3);
-        ll.addLast(7);
-        ll.addInOrder(5);
-        ll.addInOrder(6);
-        ll.addInOrder(9);
+        System.out.println(bst.output);
 
-        System.out.println(ll.print());
+        bst.inOrderTrav();
 
-        System.out.println(ll.delete(6));
+        bst.preOrderTrav();
 
-        System.out.println(ll.print());
+        bst.postOrderTrav();
+
+        String string = bst.inOrderTravString();
+
+        String [] newString = string.split(" ");
+        for(int x=0; x<newString.length; x++){
+            int temp = Integer.parseInt(newString[x]);
+            bst.insert(temp);
+        }
+        bst.inOrderTrav();
+
+
     }
 }
