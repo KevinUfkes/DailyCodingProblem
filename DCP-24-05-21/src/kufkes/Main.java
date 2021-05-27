@@ -38,6 +38,10 @@ public class Main {
         System.out.println(dll.delete(6));
         System.out.println(dll.delete(2));
         System.out.println(dll.printList());
+        System.out.println("");
+
+        System.out.println(0^200);
+        System.out.println(4^3);
 
     }
 }
