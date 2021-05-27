@@ -1,7 +1,7 @@
 // Author: Kevin Ufkes
 // Date: May 26, 2021
 // Project: Daily Coding Problem May 24, 2021
-// Description:
+// Description (HARD):
 //      This problem was asked by Google.
 //          An XOR linked list is a more memory efficient doubly linked list.
 //          Instead of each node holding next and prev fields, it holds a field named both,
@@ -18,6 +18,26 @@ package kufkes;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        DoublyLinkedList dll = new DoublyLinkedList();
+
+        dll.addInOrder(7);
+        dll.addInOrder(6);
+        dll.addInOrder(3);
+        dll.addInOrder(8);
+        dll.addInOrder(5);
+        dll.addInOrder(-4);
+
+        System.out.println(dll.printList());
+        System.out.println("");
+
+        System.out.println(dll.search(3));
+        System.out.println(dll.search(4));
+        System.out.println(dll.search(5));
+        System.out.println("");
+
+        System.out.println(dll.delete(6));
+        System.out.println(dll.delete(2));
+        System.out.println(dll.printList());
+
     }
 }
