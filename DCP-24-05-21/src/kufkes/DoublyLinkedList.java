@@ -1,14 +1,14 @@
 package kufkes;
 
 public class DoublyLinkedList {
-    public Node head;
+    public DLLNode head;
 
     public DoublyLinkedList(){
         this.head = null;
     }
 
     public void addFirst(int data){
-        Node n = new Node(data);
+        DLLNode n = new DLLNode(data);
         if(head==null){
             head = n;
             return;
@@ -19,12 +19,12 @@ public class DoublyLinkedList {
     }
 
     public void addLast(int data){
-        Node n = new Node(data);
+        DLLNode n = new DLLNode(data);
         if(head == null){
             head = n;
             return;
         }
-        Node curr = head;
+        DLLNode curr = head;
         while(curr.next != null){
             curr = curr.next;
         }
@@ -33,7 +33,7 @@ public class DoublyLinkedList {
     }
 
     public void addInOrder(int data){
-        Node n = new Node(data);
+        DLLNode n = new DLLNode(data);
         if(head == null){
             head = n;
             return;
@@ -43,8 +43,8 @@ public class DoublyLinkedList {
             head.prev = n;
             head = n;
         }
-        Node curr = head;
-        Node prev = head;
+        DLLNode curr = head;
+        DLLNode prev = head;
         while(curr.next != null && curr.data<data){
             prev = curr;
             curr = curr.next;
@@ -62,7 +62,7 @@ public class DoublyLinkedList {
     }
 
     public boolean search(int data){
-        Node curr = head;
+        DLLNode curr = head;
         while(curr.next!=null && curr.data!=data){
             curr = curr.next;
         }
@@ -73,7 +73,7 @@ public class DoublyLinkedList {
     }
 
     public boolean delete(int data){
-        Node curr, prev, next;
+        DLLNode curr, prev, next;
         curr = prev = next = head;
         while(next!=null && curr.data != data){
             prev = curr;
@@ -89,7 +89,7 @@ public class DoublyLinkedList {
     }
 
     public String printList(){
-        Node curr = head;
+        DLLNode curr = head;
         String s = "";
         while(curr != null){
             s += curr.data + ", ";

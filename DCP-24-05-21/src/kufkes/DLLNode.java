@@ -1,11 +1,11 @@
 package kufkes;
 
-public class Node {
-    public Node next;
-    public Node prev;
+public class DLLNode {
+    public DLLNode next;
+    public DLLNode prev;
     public int data;
 
-    public Node(int data){
+    public DLLNode(int data){
         this.data = data;
         this.next = null;
         this.prev = null;
