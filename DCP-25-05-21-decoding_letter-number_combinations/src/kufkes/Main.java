@@ -17,7 +17,6 @@ public class Main {
         for(int x=0; x<arr.length; x++){
             arr[x] = Character.getNumericValue(str.charAt(x));
         }
-
         return arr;
     }
 
@@ -62,37 +61,31 @@ public class Main {
     }
 
     public static int calcNumDecode(String msg){
-        int count = 0;
+        int count = 1;
         int [] arr = stringToIntArray(msg);
         for(int x=0; x<arr.length; x++){
             if(arr[x]==1){
                 int [] tempArr = new int[arr.length-x];
-                int y = x;
-                while(arr[y]==1 && y<arr.length){
+                int y = 0;
+                while(arr[y]==1 && y<tempArr.length){
                     tempArr[y] = arr[x];
                     y++;
                 }
-//                for(int y=0; y<tempArr.length; y++){
-//
-//                    tempArr[y] = arr[x];
-//                }
                 System.out.println(printArray(tempArr));
                 System.out.println(countConsecutive(tempArr));
                 int numConsecutive = countConsecutive(tempArr);
                 int numVariations = numVariations(numConsecutive);
                 x += numConsecutive-1;
                 System.out.println(numVariations);
+                count += numVariations;
             }
-
         }
-
-
         return count;
     }
 
     public static void main(String[] args) {
 
-        String msg01 = "1111811";
+        String msg01 = "111";
         String msg02 = "269";
         String msg03 = "19827";
 
@@ -122,8 +115,7 @@ public class Main {
 
 //        calcNumDecode(msg01);
 
-        System.out.println(calcNumDecode(msg01));
-
+        System.out.println("Count: " + calcNumDecode(msg01));
 
     }
 }
