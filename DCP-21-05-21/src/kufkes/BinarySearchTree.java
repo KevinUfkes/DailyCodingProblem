@@ -94,6 +94,7 @@ public class BinarySearchTree {
         if (curr!=null){
             System.out.print(" "+curr.data);
             recPreOrder(curr.left);
+
             recPreOrder(curr.right);
         }
     }
