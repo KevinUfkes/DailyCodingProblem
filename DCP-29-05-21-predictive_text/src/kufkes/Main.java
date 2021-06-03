@@ -12,6 +12,28 @@ package kufkes;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        String testString01 = "datigus";
+        String testString02 = "apples";
+        System.out.println(testString01.compareTo(testString02));
+        System.out.println(testString02.compareTo(testString01));
+        System.out.println(testString01.compareTo(testString01));
+
+        BSTPredictiveText bst = new BSTPredictiveText();
+
+        bst.insert("dog");
+        bst.insert("deer");
+        bst.insert("deal");
+        bst.insert("data");
+        bst.insert("zebra");
+        bst.insert("doorway");
+        bst.insert("derpadoo");
+        bst.insert("apples");
+        bst.insert("apes");
+        bst.insert("datigus");
+
+        bst.printInOrder();
+        System.out.println("");
+
+        bst.searchPredictive("d");
     }
 }
