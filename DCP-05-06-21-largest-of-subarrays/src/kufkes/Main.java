@@ -15,7 +15,35 @@ package kufkes;
 
 public class Main {
 
+    public static void maxOfSubArray(int [] arr, int k){
+
+        for(int x=0; x<arr.length-k+1; x++){
+            int max = arr[x];
+            for(int y=x; y<x+k; y++){
+                if(arr[y]>max){
+                    max = arr[y];
+                }
+            }
+            System.out.println(max);
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        //test arrays
+        int [] arr01 = new int [6];
+
+        arr01[0] = 10;
+        arr01[1] = 5;
+        arr01[2] = 2;
+        arr01[3] = 7;
+        arr01[4] = 8;
+        arr01[5] = 7;
+
+        //test k values
+        int k = 3;
+
+        maxOfSubArray(arr01, k);
+
     }
 }
