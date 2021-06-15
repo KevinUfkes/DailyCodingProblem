@@ -20,5 +20,22 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+
+        BSTree bst = new BSTree();
+        bst.insert(4);
+        bst.insert(3);
+        bst.insert(7);
+        bst.insert(8);
+        bst.insert(2);
+        bst.insert(1);
+        bst.insert(6);
+
+        bst.inOrderTraversal();
+        System.out.println("");
+
+        System.out.println(bst.lockNode(4));
+        System.out.println("");
+
+        System.out.println(bst.lockNode(1));
     }
 }
