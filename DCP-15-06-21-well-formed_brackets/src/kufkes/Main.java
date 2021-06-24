@@ -11,7 +11,23 @@ package kufkes;
 
 public class Main {
 
+    public static boolean isBalancedBrackets(String s){
+        if(s.length()%2==0){
+            for(int x=0; x<s.length(); x++){
+                if(s.charAt(x)==')'){
+                    for(int y=x-1; y>0; y--){
+
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
-	// write your code here
+        String test01 = "([])[]({})"; // true
+        String test02 = "([)]"; // false
+        String test03 = "((()"; // false
     }
 }
