@@ -1,7 +1,7 @@
 // Author: Kevin Ufkes
 // Date: June 28, 2021
 // Project: Daily Coding Problem from June 25, 2021
-// Description (EASY\):
+// Description (EASY):
 //      This problem was asked by Google.
 //          The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.
 //          For example, given the set {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}.
@@ -9,12 +9,20 @@
 
 package kufkes;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void getPowerSet(int [] arr){
         System.out.println("{}");
         for(int x=0; x<arr.length; x++){
             System.out.println("{" + arr[x] + "}");;
+        }
+
+        int count = 0;
+        for(int a=0; a<arr.length; a++){
+
+
         }
 
         for(int i=0; i<arr.length; i++){
@@ -32,6 +40,7 @@ public class Main {
 
         System.out.println("}");
     }
+
 
     public static void printArray(int [] arr){
         for(int x=0; x<arr.length; x++){
@@ -56,6 +65,11 @@ public class Main {
         testArr02[4] = 5;
 
         getPowerSet(testArr01);
+
+        System.out.println();
+
+        getPowerSet(testArr02);
+
 
     }
 }

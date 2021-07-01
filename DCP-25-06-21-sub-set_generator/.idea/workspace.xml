@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d062b6c-0eca-4c27-84ae-9bbe13685ab1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DCP-25-06-21-sub-set_generator/kufkes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DCP-25-06-21-sub-set_generator/kufkes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kufkes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kufkes/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +82,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Coding/git-repos/SchoolTaskOrganizer" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
