@@ -14,6 +14,24 @@ package kufkes;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        ArrayStack stack01 = new ArrayStack(10);
+
+        stack01.push(10);
+        stack01.push(9);
+        stack01.push(8);
+        stack01.push(7);
+        stack01.push(3);
+        stack01.push(2);
+        stack01.push(1);
+
+        System.out.println(stack01.pop());
+
+        System.out.println(stack01.push(111));
+
+        System.out.println(stack01.max());
+
+
+
     }
 }
