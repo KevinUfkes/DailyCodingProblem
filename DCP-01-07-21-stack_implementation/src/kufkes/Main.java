@@ -31,7 +31,5 @@ public class Main {
 
         System.out.println(stack01.max());
 
-
-
     }
 }
