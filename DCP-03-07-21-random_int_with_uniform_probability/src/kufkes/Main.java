@@ -8,9 +8,70 @@
 
 package kufkes;
 
+import java.util.Date;
+import java.util.Calendar;
+
 public class Main {
 
+    public static int rand5(){
+        Date date = new Date();
+        long millis = date.getTime();
+        return (int) millis%6;
+    }
+
+    public static int rand7(){
+        Date date = new Date();
+        long millis = date.getTime();
+        return (int) millis%8;
+    }
+
     public static void main(String[] args) {
-	// write your code here
+	    Date date = new Date();
+	    long millis = date.getTime();
+        System.out.println("Date: " + date);
+        System.out.println("Time: " + millis);
+
+        System.out.println(rand5());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+        System.out.println(rand7());
+
+
     }
 }
