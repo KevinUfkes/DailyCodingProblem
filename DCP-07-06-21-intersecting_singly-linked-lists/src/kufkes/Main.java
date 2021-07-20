@@ -37,7 +37,7 @@ public class Main {
         LinkedList ll01 = new LinkedList();
         LinkedList ll02 = new LinkedList();
 
-//        Node n1 = new Node(1);
+        Node n1 = new Node(1);
         Node n2 = new Node(2);
         Node n3 = new Node(3);
         Node n4 = new Node(4);
@@ -49,24 +49,24 @@ public class Main {
         Node n99 = new Node(99);
 
 
-        ll01.addNode(n10);
-        ll01.addNode(n8);
-//        ll01.addNode(n1);
-        ll01.addNode(n2);
-        ll01.addNode(n5);
-        ll01.addNode(n7);
-        ll01.addNode(n3);
-        ll01.addNode(n4);
+        ll01.addInOrder(n10);
+        ll01.addInOrder(n8);
+        ll01.addInOrder(n1);
+        ll01.addInOrder(n2);
+        ll01.addInOrder(n5);
+        ll01.addInOrder(n7);
+        ll01.addInOrder(n3);
+        ll01.addInOrder(n4);
 
 
-        ll02.addNode(n11);
-        ll02.addNode(n8);
-//        ll02.addNode(n1);
-        ll02.addNode(n99);
+//        ll02.addNode(n11);
+//        ll02.addNode(n8);
+////        ll02.addNode(n1);
+//        ll02.addNode(n99);
 
         System.out.println(ll01.printList());
-        System.out.println(ll02.printList());
-
-        System.out.println(findIntersection(ll01.getHead(), ll02.getHead()));
+//        System.out.println(ll02.printList());
+//
+//        System.out.println(findIntersection(ll01.getHead(), ll02.getHead()));
     }
 }
